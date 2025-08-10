@@ -1,55 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap');
+
 body {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #fdf6f0;
+    background-color: #f8f9f4;
     color: #333;
 }
 
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left Column */
+.left-column {
+    flex: 1;
+    background-color: #dfe7df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Column */
+.right-column {
+    width: 420px;
+    background-color: #ffffff;
+    overflow-y: auto;
+    padding: 25px;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.05);
+}
+
 header {
-    padding: 20px;
-    background-color: #f8d9e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 header h1 {
-    margin: 0;
+    font-family: 'Playfair Display', serif;
+    color: #2e4d3f;
+    font-size: 1.8rem;
 }
 
 #lang-toggle {
     background: white;
-    border: 1px solid #ccc;
+    border: 1px solid #c5d1c3;
+    color: #2e4d3f;
     padding: 8px 12px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    font-family: inherit;
 }
 
-#photo-section img {
-    max-width: 90%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 15px;
-}
-
+/* Sections */
 section {
-    margin: 20px;
+    margin-bottom: 35px;
+    text-align: center;
 }
 
+section h2, section h3 {
+    font-family: 'Playfair Display', serif;
+    color: #2e4d3f;
+}
+
+section p {
+    color: #555;
+}
+
+/* Countdown */
 #countdown {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-top: 10px;
-    color: #d85f8a;
+    color: #4c7a65;
 }
 
+/* Gallery */
+.gallery img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Footer */
 footer {
-    background-color: #f8d9e0;
-    padding: 15px;
-    margin-top: 30px;
+    background-color: #e6f0eb;
+    color: #2e4d3f;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
 }
 
+/* Leaf Divider */
+.divider {
+    background: url('images/leaf-divider.png') no-repeat center;
+    background-size: contain;
+    height: 40px;
+    margin: 15px 0;
+}
+
+/* Hide class for toggling languages */
 .hidden {
     display: none;
 }

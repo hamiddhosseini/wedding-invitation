@@ -1,67 +1,100 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Wedding Invitation</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Wedding Invitation</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <div class="left-column">
+    <img src="images/your-photo.jpg" alt="Couple Photo" class="main-photo">
+  </div>
+  <div class="right-column">
     <header>
-        <h1 id="title-en">Our Wedding</h1>
-        <h1 id="title-fa" class="hidden">عروسی ما</h1>
-        <button id="lang-toggle">فارسی</button>
+      <h1 id="title-en">Our Wedding</h1>
+      <h1 id="title-fa" class="hidden">عروسی ما</h1>
+      <button id="lang-toggle">فارسی</button>
     </header>
 
-    <section id="photo-section">
-        <img src="images/your-photo.jpg" alt="Couple Photo">
+    <section id="invitation">
+      <p id="invitation-en">We joyfully invite you to the wedding of</p>
+      <p id="invitation-fa" class="hidden">
+        با خوشحالی شما را به عروسی خود دعوت می‌کنیم
+      </p>
+      <h2 id="names-en">Fatemeh & Hamid</h2>
+      <h2 id="names-fa" class="hidden">
+        فاطمه و حمید
+      </h2>
+      <p id="date-en">September 8th, 2025</p>
+      <p id="date-fa" class="hidden">
+        ۱۷ شهریور ۱۴۰۴
+      </p>
+    </section>
+    <section id="countdown-section">
+      <h2 id="countdown-title-en">Countdown to the big day</h2>
+      <h2 id="countdown-title-fa" class="hidden">شمارش معکوس تا روز بزرگ</h2>
+      <div id="countdown"></div>
     </section>
 
-    <section id="countdown-section">
-        <h2 id="countdown-title-en">Countdown to the big day</h2>
-        <h2 id="countdown-title-fa" class="hidden">شمارش معکوس تا روز بزرگ</h2>
-        <div id="countdown"></div>
+    <section id="gallery-section">
+      <h3 id="gallery-title-en">Photo Gallery</h3>
+      <h3 id="gallery-title-fa" class="hidden">گالری عکس</h3>
+      <div class="gallery">
+          <img src="images/photo1.jpg" alt="Gallery Photo">
+          <img src="images/photo2.jpg" alt="Gallery Photo">
+          <img src="images/photo3.jpg" alt="Gallery Photo">
+          <!-- add more images here -->
+      </div>
     </section>
 
     <section id="details-section">
-        <h3 id="details-en">📍 Ceremony Details</h3>
-        <h3 id="details-fa" class="hidden">📍 جزئیات مراسم</h3>
-        <p id="details-text-en">Date: 8 September 2025, 7:00 PM<br>
-           Location: Kian Wedding Venu, Shahrekord, Iran<br>
-           <a href="https://maps.google.com" target="_blank">View on map</a>
-        </p>
-        <p id="details-text-fa" class="hidden">تاریخ: ۱۷ شهریور ۱۴۰۴، ساعت ۱۹.۰۰br>
-           مکان: باغ تالار رویا، شهرکیان<br>
-           <a href="https://maps.google.com" target="_blank">مشاهده روی نقشه</a>
-        </p>
+      <h3 id="details-en">📍 Ceremony Details</h3>
+      <h3 id="details-fa" class="hidden">📍 جزئیات مراسم</h3>
+      <p id="details-text-en">
+        Date: 8 September 2025, 7:00 PM<br>
+        Location: Kian Wedding Venu, Shahrekord, Iran<br>
+        <a href="https://www.google.com/maps/place/kiyan+wedding+venue/@32.2587548,50.90037,17z/data=!3m1!4b1!4m6!3m5!1s0x3fbeee5c803bfd67:0x517fe979883f5f82!8m2!3d32.2587548!4d50.9029449!16s%2Fg%2F11c55v9_gq?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank">View on map</a>
+      </p>
+      <p id="details-text-fa" class="hidden">
+        تاریخ: ۱۷ شهریور ۱۴۰۴، ساعت ۱۹.۰۰
+        <br>
+        مکان: باغ تالار رویا، شهرکیان
+        <br>
+        <a href="https://www.google.com/maps/place/kiyan+wedding+venue/@32.2587548,50.90037,17z/data=!3m1!4b1!4m6!3m5!1s0x3fbeee5c803bfd67:0x517fe979883f5f82!8m2!3d32.2587548!4d50.9029449!16s%2Fg%2F11c55v9_gq?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank">مشاهده روی نقشه</a>
+      </p>
     </section>
 
     <section id="poems-section">
-        <h3 id="poems-title-en">💌 Poems</h3>
-        <h3 id="poems-title-fa" class="hidden">💌 شعرها</h3>
-        <p id="poems-en">"When the one whose hand you’re holding
-            Is the one one who holds your heart
-            When the one whose eyes you gaze into
-            Gives your hopes and dreams their start,
-            When the one you think of first and last
-            Is the one who holds you tight,
-            And the things you plan together
-            Make the whole world seem just right,
-            When the one whom you believe in
-            Puts their faith and trust in you,
-            You’ve found the one and only love
-            You’ll share your whole life through."</p>
-        <p id="poems-fa" class="hidden">"نامه ای بنوشته بودیم از الست
-            تا بخوانیدش کنون مستانه مست
-            ما به شمع رویتان دل بسته ایم
-            تا دهیم این عاشقان را دست به دست"</p>
+      <p id="poems-en">"When the one whose hand you’re holding
+        Is the one one who holds your heart
+        When the one whose eyes you gaze into
+        Gives your hopes and dreams their start,
+        When the one you think of first and last
+        Is the one who holds you tight,
+        And the things you plan together
+        Make the whole world seem just right,
+        When the one whom you believe in
+        Puts their faith and trust in you,
+        You’ve found the one and only love
+        You’ll share your whole life through."</p>
+      <p id="poems-fa" class="hidden">"نامه ای بنوشته بودیم از الست
+        تا بخوانیدش کنون مستانه مست
+        ما به شمع رویتان دل بسته ایم
+        تا دهیم این عاشقان را دست به دست"</p>
     </section>
 
     <footer>
-        <p id="footer-en">We can’t wait to celebrate with you!</p>
-        <p id="footer-fa" class="hidden">بی‌صبرانه منتظریم تا با شما جشن بگیریم!</p>
+      <p id="footer-en">We can’t wait to celebrate with you!</p>
+      <p id="footer-fa" class="hidden">بی‌صبرانه منتظریم تا با شما جشن بگیریم!</p>
     </footer>
+  </div>
 
-    <script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
+
 </html>
