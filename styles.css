@@ -1,0 +1,59 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #fdf6f0;
+    color: #333;
+}
+
+header {
+    padding: 20px;
+    background-color: #f8d9e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+#lang-toggle {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#photo-section img {
+    max-width: 90%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+section {
+    margin: 20px;
+}
+
+#countdown {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #d85f8a;
+}
+
+footer {
+    background-color: #f8d9e0;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+html[dir="rtl"] {
+    font-family: "Vazir", sans-serif;
+}
