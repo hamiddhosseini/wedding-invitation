@@ -10,32 +10,44 @@ body {
 
 .container {
     display: flex;
+    flex-direction: row;
     height: 100vh;
+    overflow: hidden; /* Prevent wrapping */
+    white-space: nowrap; /* Ensure side-by-side */
 }
 
 /* Left Column */
 .left-column {
     flex: 1;
-    background-color: #dfe7df;
+    min-width: 0; /* Prevent overflow issues */
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #dfe7df;
 }
 
 .main-photo {
     width: 100%;
     height: 100%;
+    max-height: 100%;
     object-fit: cover;
+    object-position: bottom;
 }
 
 /* Right Column */
 .right-column {
-    width: 420px;
+    width: 420px; /* Fixed width */
+    flex-shrink: 0; /* Prevent shrinking */
     background-color: #ffffff;
-    overflow-y: auto;
+    overflow-y: auto; /* Scroll vertically */
     padding: 25px;
     box-shadow: -2px 0 8px rgba(0,0,0,0.05);
+    overflow-x: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+
 }
+
 
 header {
     display: flex;
@@ -103,7 +115,14 @@ footer {
 .divider {
     background: url('images/leaf-divider.png') no-repeat center;
     background-size: contain;
-    height: 40px;
+    height: 85px;
+    margin: 15px 0;
+}
+
+.divider-flipped {
+    background: url('images/leaf-divider-flipped.png') no-repeat center;
+    background-size: contain;
+    height: 85px;
     margin: 15px 0;
 }
 
