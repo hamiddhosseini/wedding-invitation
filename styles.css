@@ -134,3 +134,78 @@ footer {
 html[dir="rtl"] {
     font-family: "Vazir", sans-serif;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* safer box sizing and disable horizontal scroll */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { width: 100%; margin: 0; padding: 0; overflow-x: hidden; }
+
+    .container {
+        flex-direction: column;
+        height: auto;            /* allow page to grow vertically */
+        align-items: center;     /* center children (left + right columns) horizontally */
+        overflow: visible;       /* prevent clipping that may shift layout */
+        white-space: normal;
+      }
+
+    .left-column {
+        width: 100%;
+        flex: none;
+        height: 250px;           /* thumbnail photo height on phones */
+    }
+
+    .main-photo, .gallery img { display: block; max-width: 100%; height: auto; }
+    .right-column[dir="ltr"] { text-align: center; }
+    .right-column[dir="rtl"] { text-align: right; }
+
+    .main-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+
+    .right-column {
+        width: calc(100% - 32px);/* leave a little breathing room for padding on tiny screens */
+        max-width: 420px;        /* keep your desktop width as a maximum */
+        margin: 0 auto;          /* center the column horizontally */
+        padding: 16px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.06); /* remove the negative-offset shadow */
+        overflow: visible;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    section h2, section h3 {
+      font-size: 1.3rem;
+    }
+
+    section p, footer p {
+      font-size: 1rem;
+    }
+
+    #countdown {
+      font-size: 1.2rem;
+    }
+
+    /* Gallery: grid for small screens */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    #lang-toggle {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+  }
